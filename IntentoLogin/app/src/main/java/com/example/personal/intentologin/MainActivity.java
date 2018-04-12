@@ -1,5 +1,6 @@
 package com.example.personal.intentologin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.DialogInterface;
@@ -9,6 +10,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.auth.api.Auth;
@@ -39,8 +42,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         mUsernameTextView = (TextView) findViewById(R.id.field_user_name);
         mEmailTextView = (TextView) findViewById(R.id.field_email);
+        Button button = (Button) findViewById(R.id.btn_seeMap);
 
         initGoogleAccount();
+
     }
 
 
@@ -156,5 +161,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 })
                 .setNegativeButton("No", null)
                 .show();
+    }
+
+
+    public void onClick(View view){
+
+        if(view == findViewById(R.id.btn_seeMap)){
+            Intent intent = new Intent(this, MapsActivity.class);
+            startActivity(intent);
+        }
     }
 }

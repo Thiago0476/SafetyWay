@@ -6,34 +6,54 @@
     android:layout_height="match_parent"
     tools:context="com.example.personal.intentologin.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="center_horizontal|bottom">
-
-        <ImageView
-            android:id="@+id/photo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/field_user_name"
-            style="@style/ThemeOverlay.MyTextDetail"
-            android:text="Username: " />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="68dp">
 
-        <TextView
-            android:id="@+id/field_email"
-            style="@style/ThemeOverlay.MyTextDetail"
-            tools:text="Firebase User ID: 123456789abc" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                app:srcCompat="@drawable/googlemaps" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:text="Bienvenido a SafetyWay demo " />
+
+            <TextView
+                android:id="@+id/field_email"
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="match_parent"
+                tools:text="Firebase User ID: 123456789abc" />
+
+            <TextView
+                android:id="@+id/field_user_name"
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="match_parent"
+                android:text="Username: " />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_seeMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:background="@android:color/holo_orange_dark"
+            android:text="¿Donde Estoy?"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:onClick="onClick"/>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

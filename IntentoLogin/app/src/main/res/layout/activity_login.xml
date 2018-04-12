@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:background="@android:color/background_dark"
+                    android:background="@android:color/holo_orange_dark"
                     android:onClick="onClickLogin"
                     android:text="@string/sign_in"
                     android:textAllCaps="false"
